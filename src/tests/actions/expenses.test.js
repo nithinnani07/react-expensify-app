@@ -112,3 +112,7 @@ test('should fetch the expenses from firebase', () => {
         done();
     });
 });
+
+test('should remove the expenses from firebase', () => {
+
+});
