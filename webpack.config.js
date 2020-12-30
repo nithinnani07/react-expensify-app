@@ -11,7 +11,7 @@ if (process.env.NODE_ENV === 'test') {
 }
 
 module.exports = (env) => {
-    const isProduciton = env === 'production';
+    const isProduction = env === 'production';
     const CSSExtract = new ExtractTextPlugin('styles.css');
 
     return {
@@ -57,7 +57,7 @@ module.exports = (env) => {
                 'process.env.FIREBASE_APP_ID': JSON.stringify(process.env.FIREBASE_APP_ID)
             })
         ],
-        devtool: isProduciton ? 'source-map' : 'inline-source-map',
+        devtool: isProduction ? 'source-map' : 'inline-source-map',
         devServer: {
             contentBase: path.join(__dirname, 'public'),
             historyApiFallback: true,
